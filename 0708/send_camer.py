@@ -31,9 +31,8 @@ def main():
         loadcell_value = request_loadcell_value()
         print(f'Coner_point: {coner_point}, Height: {box_height}')
         print(f'Loadcell value at {timestamp}: {loadcell_value}')
-        response_code, response_text = send_data(coner_point, box_height, loadcell_value, timestamp)
-        print(response_code)
-        print(response_text)
+        status_code, response_text = send_data(coner_point, box_height, loadcell_value, timestamp)
+        print(f'Server response: {status_code} - {response_text}')
 
 if __name__ == "__main__":
     main()
