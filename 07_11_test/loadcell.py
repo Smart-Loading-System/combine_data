@@ -95,9 +95,10 @@ def getRawBytesAndPrintAll():
     print(sum_value)
     #count += 1
     #print(count)
-    time.sleep(3)
+    time.sleep(2)
     
-    return weightValue, weightValue2, weightValue3, weightValue4, sum_value
+    #return weightValue, weightValue2, weightValue3, weightValue4, sum_value
+    return sum_value
 
 '''
 About the reading format.
@@ -163,13 +164,14 @@ if READ_MODE == READ_MODE_INTERRUPT_BASED:
     hx4.enableReadyCallback(printAll)
     print("[INFO] Finished enabling the callback.")
 
-
+'''
 while True:
     try:
         if READ_MODE == READ_MODE_POLLING_BASED:
-            wieght, wieght2, weight3, weight4 = getRawBytesAndPrintAll()
+            wieght, wieght2, weight3, weight4, sum_value = getRawBytesAndPrintAll()
 
     except (KeyboardInterrupt, SystemExit):
         GPIO.cleanup()
         print("[INFO] 'KeyboardInterrupt Exception' detected. Cleaning and exiting...")
         sys.exit()
+'''
