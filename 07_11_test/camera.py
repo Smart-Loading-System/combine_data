@@ -23,7 +23,7 @@ time.sleep(2)
 def take_photo():
     
     time_now = datetime.now()
-    image_path = time_now + '.jpg'
+    image_path = '0709.jpg'
     
     GPIO.output(TRIG,True)
     time.sleep(0.00001)        # 10uS의 펄스 발생을 위한 딜레이
@@ -39,7 +39,7 @@ def take_photo():
     distance = check_time * 34300 / 2
     
     # 사진 찍기 전에 LED 색상 변경
-    pixels.fill((130,130,130))
+    pixels.fill((30,30,30))
     pixels.show()
 
     # 사진 찍기 (libcamera-jpeg 사용)
