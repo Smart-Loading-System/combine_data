@@ -4,7 +4,7 @@ import loadcell
 import time
 
 # 서버 정보를 설정합니다.
-HOST = '192.168.118.242'  # 서버의 주소 (여기서는 로컬호스트)
+HOST = '0.0.0.0'  # 서버의 주소 (여기서는 로컬호스트)
 PORT = 65439  # 서버의 포트 번호
 
 def read_loadcell_sensor():
